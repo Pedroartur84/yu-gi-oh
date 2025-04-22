@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Calculadora de Probabilidade - Yu-Gi-Oh!</title>
+</head>
+<body>
+    <h1>Calcular Probabilidade de Cartas</h1>
+    {% if error %}
+        <p style="color: red;">{{ error }}</p>
+    {% endif %}
+    <form method="post">
+        {% csrf_token %}
+        <label for="deck_size">Tamanho do Deck:</label>
+        <input type="number" id="deck_size" name="deck_size" value="40" min="1"><br>
+
+        <label for="copias_no_deck">Cópias da Carta no Deck:</label>
+        <input type="number" id="copias_no_deck" name="copias_no_deck" value="3" min="1"><br>
+
+        <label for="mao_inicial">Tamanho da Mão Inicial:</label>
+        <input type="number" id="mao_inicial" name="mao_inicial" value="5" min="1"><br>
+
+        <label for="copias_desejadas">Cópias Desejadas na Mão:</label>
+        <input type="number" id="copias_desejadas" name="copias_desejadas" value="1" min="1"><br>
+
+        <button type="submit">Calcular</button>
+    </form>
+</body>
+</html>

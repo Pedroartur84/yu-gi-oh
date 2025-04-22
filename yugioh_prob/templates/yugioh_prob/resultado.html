@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Resultado</title>
+</head>
+<body>
+    <h1>Probabilidade Encontrada:</h1>
+    <p>Chance de obter <strong>exatamente</strong> {{ copias_desejadas }} cópias: {{ prob_exact }}</p>
+    <p>Chance de obter <strong>pelo menos</strong> {{ copias_desejadas }} cópias: {{ prob_at_least }}</p>
+    <a href="{% url 'calcular' %}">Voltar</a>
+</body>
+</html>
