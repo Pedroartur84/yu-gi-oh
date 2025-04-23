@@ -1,7 +1,7 @@
 from django.urls import path
-from . import views
+from .views import yu_gi_oh_calculator
 
 
 urlpatterns = [
-    path('', views.calcular_probabilidade, name='calcular')
+    path('', yu_gi_oh_calculator, name='yu_gi_oh_calculator')
 ]
